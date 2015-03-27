@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link href="/html/style/styles.css" rel="stylesheet" type="text/css" />
+        <title>Time-lapse video on Raspberry Pi</title>
+    </head>
+    <body>
+        <div id="header">
+            <h1>Time-lapse video</h1>
+            <h2>on Raspberry Pi</h2>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/cgi/current_view.py">Current view</a></li>
+                <li><a href="/cgi/download_video.py" class="active">Download video</a></li>
+                <li><a href="/cgi/settings.py">Settings</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <h3>Download video</h3>
+            <p>Now you can select single pictures and create a video from them or delete them.</p>
+            <form action="/cgi/download_video_submit.py" method="post">
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <select name="files" multiple="" size="10" class="download">
+                                <!--files_tag-->
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Action:</b></td>
+                        <td>
+                            <select name="process" class="download">
+                                <option value="download">Download</option>
+                                <option value="delete">Delete</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" class="download" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="footer">
+            <p>This project has been created by <b>Jan Cernoch (CER0130)</b> as semestral project from the subject <b><i>"Multimedia data processing"</i></b> on <i>VSB - Technical University of Ostrava</i>.</p>
+        </div>
+    </body>
+</html>

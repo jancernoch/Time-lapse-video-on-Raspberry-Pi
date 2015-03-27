@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link href="/html/style/styles.css" rel="stylesheet" type="text/css" />
+        <title>Time-lapse video on Raspberry Pi</title>
+    </head>
+    <body>
+        <div id="header">
+            <h1>Time-lapse video</h1>
+            <h2>on Raspberry Pi</h2>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/cgi/current_view.py">Current view</a></li>
+                <li><a href="/cgi/download_video.py">Download video</a></li>
+                <li><a href="/cgi/settings.py" class="active">Settings</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <h3>Process management</h3>
+            <!--running_tag-->
+            <h3>Configuration</h3>
+            <!--message_tag_start-->
+            <p>Configuration is possible only if process is not running.</p>
+            <!--message_tag_end-->
+            <!--configuration_tag_start-->
+            <form action="/cgi/settings_submit.py" method="post">
+                <table>
+                    <tr>
+                        <td><b>JPEG width:</b></td>
+                        <td>
+                            <!--width_tag-->
+                            pixels (320 - 1280)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>JPEG height:</b></td>
+                        <td>
+                            <!--height_tag-->
+                            pixels (240 - 720)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>JPEG quality:</b></td>
+                        <td>
+                            <!--quality_tag-->
+                            % (1 - 100)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Horizontal flip:</b></td>
+                        <td>
+                            <select name="horizontal_flip" class="settings">
+                                <!--hflip_tag-->
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Vertical flip:</b></td>
+                        <td>
+                            <select name="vertical_flip" class="settings">
+                                <!--vflip_tag-->
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Timeout:</b></td>
+                        <td>
+                            <!--timeout_tag-->
+                            <select name="timeout_unit" class="settings">
+                                <option value="s">seconds</option>
+                                <option value="m">minutes</option>
+                                <option value="h">hours</option>
+                                <option value="d">days</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>Timestamp:</b></td>
+                        <td>
+                            <select name="timestamp" class="settings">
+                                <!--timestamp_tag-->
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" class="settings" /></td>
+                    </tr>
+                </table>
+            </form>
+            <!--configuration_tag_end-->
+        </div>
+        <div id="footer">
+            <p>This project has been created by <b>Jan Cernoch (CER0130)</b> as semestral project from the subject <b><i>"Multimedia data processing"</i></b> on <i>VSB - Technical University of Ostrava</i>.</p>
+        </div>
+    </body>
+</html>
